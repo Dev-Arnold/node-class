@@ -1,0 +1,64 @@
+Create a register.html file and design a sign up form inside there. 
+Read on express js. 
+Read on Database and types 
+Download MongoDB Compass and MongoDB community server. 
+Register an account on Postman 
+
+
+
+
+CRUD Operation 
+Create 
+Read 
+Update 
+Delete 
+
+
+HTTP Methods 
+Get 
+Post 
+Put 
+Patch 
+Delete 
+
+MVC 
+Model : This is where the structure of the database is made. It is also used to query the database. 
+Views : What the user sees. 
+Controller : This is where the logic lives. It takes requests and send back responses. 
+
+
+DataBase : Where we store, manage and retrieve data. 
+Types 
+1. Relational DataBase(SQL) : They store data in a structured format. Rows and Columns. It uses SQL to query the data. examples include PostgreSQL, mySQL, SQLite etc
+2. Non-Relational DataBase (No-SQL) : They store data in a flexible format. e.g., documents and collections. It doesn't use SQL. examples MongoDB, MariaDB, CassandraDB etc 
+
+
+
+Assignments
+   Read on Authorization & Authentication 
+
+Authentication : Is the process of checking a user credentials if it matches what is in the database. 
+Authorization : This talks about giving access to certain routes. 
+
+
+DataBase Relationship talks about how tables or collections are connected to each other.
+Examples of Relationships 
+   - one to many  
+   - many to many 
+   - one to one 
+
+
+   
+
+Steps to upload image 
+1. npm install multer-storage-cloudinary cloudinary multer
+2. create an account on cloudinary and get all the necessary keys 
+   CLOUDINARY_API_KEY=
+   CLOUDINARY_API_SECRET=
+   CLOUDINARY_CLOUD_NAME= 
+
+3. Update your user model and include image 
+4. create a cloudinaryConfig.js file 
+5. create an upload.js file 
+6. in the user Controller, add "let imageUrl = req.file ? req.file.path : null"
+7. in the user route, for the create user route, add "router.post('/', upload.single('image'), createUser)"
